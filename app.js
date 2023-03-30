@@ -43,4 +43,29 @@ let users = [
       isActive: false,
     },
   ];
-// Exercise 2 ForEach
+
+// Exercise 2: ForEach
+
+users.forEach(user => console.log(user.name));
+
+//Exercise 3 Map
+
+let newUsers = users.map((user) => {
+    return { name: user.name, score: user.score };
+})
+console.log(newUsers)
+
+//Exercise 4: filter
+
+let activeUsers = users.filter((user) => user.isActive);
+
+console.log(activeUsers);
+
+//Excercise 5: sort
+
+users.sort((a, b) => {
+  if (a.score < b.score) return 1;
+  else return -1;
+});
+
+console.log(users);
